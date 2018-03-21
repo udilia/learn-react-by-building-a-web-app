@@ -22,11 +22,9 @@ cd learn-react-by-building-a-web-app/react-coin
 
 Not familiar with Git?
 
-<a href="https://github.com/UdiliaInc/learn-react-by-building-a-web-app/archive/master.zip">Download ZIP</a> extract the contents of the zip file and `cd` into `react-coin` folder
-
-```
-cd learn-react-by-building-a-web-app-master/react-coin
-```
+- <a href="https://github.com/UdiliaInc/learn-react-by-building-a-web-app/archive/master.zip">Download ZIP</a>
+- extract the contents of the zip file
+- and `cd` into `react-coin` folder `cd learn-react-by-building-a-web-app-master/react-coin`
 
 Install dependencies
 
