@@ -1,0 +1,34 @@
+.Pagination {
+  margin: 50px auto;
+  text-align: center;
+}
+
+.Pagination-button {
+  text-align: center;
+  border: none;
+  border-radius: 16px;
+  background-color: #4997e5;
+  transition: background-color .2s;
+  color: white;
+  cursor: pointer;
+  margin: 10px;
+  width: 44px;
+  height: 34px;
+}
+
+.Pagination-button:hover {
+  background-color: #457cb2;
+}
+
+.Pagination-button:focus {
+  outline: none;
+}
+
+.Pagination-button:disabled {
+  background-color: #1f364d;
+  cursor: not-allowed;
+}
+
+.Pagination-info {
+  font-size: 12px;
+}
