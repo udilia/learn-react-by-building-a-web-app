@@ -2,6 +2,8 @@
 
 Starter files for the <a href="https://udilia.com/courses/learn-react-by-building-a-web-app">Learn React by building a web app</a> Course.
 
+![Poster](https://udilia.com/images/react-coin-poster.jpg)
+
 # Project structure
 
 `react-coin` is the folder, where we are going to work for this entire course.
