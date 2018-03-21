@@ -2,7 +2,7 @@
 
 Starter files for the <a href="https://udilia.com/courses/learn-react-by-building-a-web-app">Learn React by building a web app</a> Course.
 
-![Poster](https://udilia.com/images/react-coin-poster.jpg)
+<img src="https://udilia.com/images/react-coin-poster.jpg" alt="Poster" style="width: 600px;"/>
 
 # Project structure
 
