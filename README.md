@@ -17,14 +17,14 @@ Starter files for the <a href="https://udilia.com/courses/learn-react-by-buildin
 clone this repository and `cd` into `react-coin` folder
 
 ```
-git clone https://github.com/UdiliaInc/learn-react-by-building-a-web-app.git
+git clone https://github.com/udilia/learn-react-by-building-a-web-app.git
 
 cd learn-react-by-building-a-web-app/react-coin
 ```
 
 ### Not familiar with Git?
 
-- <a href="https://github.com/UdiliaInc/learn-react-by-building-a-web-app/archive/master.zip">Download ZIP</a>
+- <a href="https://github.com/udilia/learn-react-by-building-a-web-app/archive/master.zip">Download ZIP</a>
 - extract the contents of the zip file
 - and `cd` into `react-coin` folder `cd learn-react-by-building-a-web-app-master/react-coin`
 
