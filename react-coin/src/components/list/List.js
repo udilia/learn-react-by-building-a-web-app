@@ -1,7 +1,8 @@
 import React from 'react';
+import Loading from '../common/Loading';
 import { handleResponse } from '../../helpers';
 import { API_URL } from '../../config';
-import './Table.css'
+import './Table.css';
 
 class List extends React.Component {
   constructor() {
@@ -45,7 +46,7 @@ class List extends React.Component {
 
   render() {
     if (this.state.loading === true) {
-      return <div>Loading...</div>
+      return <div className='loading-container'><Loading /></div>
     } else {
       return <div>
         <table className='Table'>
@@ -79,8 +80,6 @@ class List extends React.Component {
             ))}
           </tbody>
         </table>
-
-
       </div>
     }
   }
