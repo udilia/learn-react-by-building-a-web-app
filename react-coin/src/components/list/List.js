@@ -45,9 +45,15 @@ class List extends React.Component {
   }
 
   render() {
-    if (this.state.loading === true) {
+    if (this.state.loading) {
       return <div className='loading-container'><Loading /></div>
-    } else {
+    }
+
+    if (this.state.error) {
+      return <div className='error'>{this.state.error}</div>
+    }
+
+    else {
       return <div>
         <table className='Table'>
           <thead className='Table-head'>
