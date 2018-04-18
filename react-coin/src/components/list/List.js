@@ -3,6 +3,7 @@ import Loading from '../common/Loading';
 import { handleResponse } from '../../helpers';
 import { API_URL } from '../../config';
 import Table from './Table.js';
+import Pagination from './Pagination';
 
 class List extends React.Component {
   constructor() {
@@ -12,17 +13,24 @@ class List extends React.Component {
       loading: false,
       currencies: [],
       error: null,
+      totalPages: 0,
+      page: 1,
     }
+
+    this.handlePageChange = this.handlePageChange.bind(this);
   }
 
-  componentDidMount() {
+  fetchData() {
     this.setState({ loading: true })
 
-    fetch(`${API_URL}/cryptocurrencies?page=1&perPage=20`)
+    const { page } = this.state;
+
+    fetch(`${API_URL}/cryptocurrencies?page=${page}&perPage=20`)
       .then(handleResponse)
-      .then((data) => {
+      .then(({ currencies, totalPages }) => {
         this.setState({
-          currencies: data.currencies,
+          currencies,
+          totalPages,
           loading: false,
         });
       })
@@ -32,6 +40,20 @@ class List extends React.Component {
           loading: false,
         });
       });
+  }
+
+  componentDidMount() {
+    this.fetchData();
+  }
+
+  handlePageChange(direction) {
+    const { page } = this.state;
+
+    if (direction === 'prev') {
+      this.setState({ page: page - 1 }, this.fetchData);
+    } else {
+      this.setState({ page: page + 1 }, this.fetchData);
+    }
   }
 
   renderChangePercent(percent) {
@@ -45,7 +67,7 @@ class List extends React.Component {
   }
 
   render() {
-   const { currencies, loading, error } = this.state;
+   const { currencies, loading, error, page, totalPages } = this.state;
 
     if (loading) {
       return <div className='loading-container'><Loading /></div>
@@ -56,7 +78,20 @@ class List extends React.Component {
     }
 
     else {
-      return <Table currencies={currencies} renderChangePercent={this.renderChangePercent}/>
+      return (
+        <div>
+          <Table
+            currencies={currencies}
+            renderChangePercent={this.renderChangePercent}
+          />
+
+          <Pagination
+            page={page}
+            totalPages={totalPages}
+            handlePageChange={this.handlePageChange}
+          />
+        </div>
+      )
     }
   }
 }
