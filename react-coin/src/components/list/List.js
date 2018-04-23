@@ -5,6 +5,7 @@ import { API_URL } from '../../config';
 import Table from './Table.js';
 import Pagination from './Pagination';
 
+
 class List extends React.Component {
   constructor() {
     super();
@@ -56,16 +57,6 @@ class List extends React.Component {
     }
   }
 
-  renderChangePercent(percent) {
-    if (percent > 0) {
-      return <span className='percent-raised'>{percent}% &uarr;</span>
-    } else if (percent < 0) {
-      return <span className='percent-fallen'>{percent}% &darr;</span>
-    } else {
-      return <span>{percent}%</span>
-    }
-  }
-
   render() {
    const { currencies, loading, error, page, totalPages } = this.state;
 
@@ -82,7 +73,6 @@ class List extends React.Component {
         <div>
           <Table
             currencies={currencies}
-            renderChangePercent={this.renderChangePercent}
           />
 
           <Pagination
