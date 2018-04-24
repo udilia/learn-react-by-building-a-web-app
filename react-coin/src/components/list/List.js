@@ -5,7 +5,6 @@ import { API_URL } from '../../config';
 import Table from './Table.js';
 import Pagination from './Pagination';
 
-
 class List extends React.Component {
   constructor() {
     super();
