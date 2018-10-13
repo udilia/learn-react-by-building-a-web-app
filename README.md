@@ -1,6 +1,6 @@
 # Learn React by building a web app
 
-Starter files for the <a href="https://udilia.com/courses/learn-react-by-building-a-web-app">Learn React by building a web app</a> Course.
+Starter files for the <a href="https://www.udemy.com/learn-react-by-building-and-deploying-production-ready-app">Learn React by building and deploying production ready app</a> Course.
 
 <img src="https://udilia.com/images/react-coin-poster.jpg" alt="Poster" width="600" />
 
